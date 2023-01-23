@@ -10,11 +10,11 @@ public class FavoritesAdsAndAuthorizationTest  extends BaseTest {
         dromHomePage
                 .clickToLoginAndRegistration();
         dromAuthorizationPage
-                .enterPhoneNumber("+79964244116")
+                //.enterPhoneNumber("+79964244116")
                 //.enterLogin("kotik4")
+                .enterEmail("test_drom@mail.ru")
                 .enterPassword("prisoska123")
                 .clickSignButton();
-
         dromHomePage
                 .goToPersonalAccount();
         dromPersonalAccauntPage
@@ -24,9 +24,10 @@ public class FavoritesAdsAndAuthorizationTest  extends BaseTest {
                 .checkEmailMatches("test_drom@mail.ru")
                 .checkPhoneNumberMatches("+79964244116")
                 .backToHomePage();
-
         dromFavouritesPage
                 .checkAdCorrectAddition(dromHomePage.addAdToFavourites());
+
+        //ниже идет проверка на то, добавилось ли правильное колличество объявлений
         dromHomePage
                 .clickToFavorite();
         dromFavouritesPage

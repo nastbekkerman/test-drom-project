@@ -9,9 +9,8 @@ public class RegionPage extends BasePage {
     public RegionPage(WebDriver driver) {
         super(driver);
     }
-    private final By desiredRegion = By.xpath("//a[text()=\"Приморский край\"]");
-
-    public RegionPage findDesiredRegion () {
+    public RegionPage findDesiredRegion (String region) {
+        By desiredRegion = By.xpath("//a[text()=\"" + region + "\"]");
         waitElementIsVisible(driver.findElement(desiredRegion));
         driver.findElement(desiredRegion).click();
 

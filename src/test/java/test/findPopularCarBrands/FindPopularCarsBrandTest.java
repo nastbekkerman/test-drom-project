@@ -11,7 +11,7 @@ public class FindPopularCarsBrandTest extends BaseTest {
         dromHomePage
                 .clickToRegionChangePage();
         regionPage
-                .findDesiredRegion();
+                .findDesiredRegion("Приморский край");
         dromHomePage
                 .findPopularCar();
 
